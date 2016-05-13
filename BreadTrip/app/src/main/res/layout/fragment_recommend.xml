@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAF5E8">
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_view_layout"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_view_relayout">
+
+            <EditText
+                android:id="@+id/search_et_input"
+                android:layout_width="@dimen/edit_text_wid"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_text_margin"
+                android:background="@drawable/search_edittext_shape"
+                android:hint="搜索目的地、游记、故事集、用户"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColorHint="@android:color/white"
+                android:textSize="@dimen/edit_text_size" />
+
+            <TextView
+                android:id="@+id/search_et_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="@dimen/text_view_margin_left"
+                android:layout_marginRight="@dimen/text_view_margin_right"
+                android:clickable="true"
+                android:text="附近"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/edit_text_size" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/recommend_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"></ListView>
+</LinearLayout>
